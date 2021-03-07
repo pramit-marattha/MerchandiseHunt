@@ -3,7 +3,16 @@ import useFormValidation from "../Hooks/useFormValidation";
 import validateCreateProduct from "../components/Product/validateCreateProduct";
 import firebase from "../firebase";
 import UserContext from "../contexts/UserContexts";
-import { IonPage, IonContent, IonItem, IonInput, IonRow } from "@ionic/react";
+import {
+  IonPage,
+  IonContent,
+  IonItem,
+  IonInput,
+  IonRow,
+  IonLabel,
+  IonCol,
+  IonButton,
+} from "@ionic/react";
 import SmallHeader from "../components/Header/SmallHeader";
 import LargeHeader from "../components/Header/LargeHeader";
 import { toast } from "../utils/toast";
