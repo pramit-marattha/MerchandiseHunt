@@ -3,7 +3,7 @@ import useFormValidation from "../Hooks/useFormValidation";
 import validateCreateProduct from "../components/Product/validateCreateProduct";
 import firebase from "../firebase";
 import UserContext from "../contexts/UserContexts";
-import { IonPage, IonContent, IonItem, IonInput } from "@ionic/react";
+import { IonPage, IonContent, IonItem, IonInput, IonRow } from "@ionic/react";
 import SmallHeader from "../components/Header/SmallHeader";
 import LargeHeader from "../components/Header/LargeHeader";
 import { toast } from "../utils/toast";
@@ -59,22 +59,60 @@ const Submit = ({ history }) => {
   }
 
   return (
-    <IonPage>
-      <SmallHeader title="Submit" />
-      <IonContent fullscreen>
-        <LargeHeader title="Submit" />
-        <IonItem lines="full">
-          <IonLabel position="floating">Title</IonLabel>
-          <IonInput
-            name="title"
-            value={values.title}
-            type="text"
-            onIonChange={handleChange}
-            required
-          ></IonInput>
-        </IonItem>
-      </IonContent>
-    </IonPage>
+    <>
+      <IonPage>
+        <SmallHeader title="Submit" />
+        <IonContent fullscreen>
+          <LargeHeader title="Submit" />
+          <IonItem lines="full">
+            <IonLabel position="floating">Title</IonLabel>
+            <IonInput
+              name="title"
+              value={values.title}
+              type="text"
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonItem lines="full">
+            <IonLabel position="floating">Description</IonLabel>
+            <IonInput
+              name="description"
+              value={values.description}
+              type="text"
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonItem lines="full">
+            <IonLabel position="floating">URL</IonLabel>
+            <IonInput
+              name="url"
+              value={values.url}
+              type="url"
+              onIonChange={handleChange}
+              required
+            ></IonInput>
+          </IonItem>
+
+          <IonRow>
+            <IonCol>
+              <IonButton
+                type="submit"
+                color="primary"
+                expand="block"
+                disabled={submitting}
+                onClick={handleSubmit}
+              >
+                Submit
+              </IonButton>
+            </IonCol>
+          </IonRow>
+        </IonContent>
+      </IonPage>
+    </>
   );
 };
 
