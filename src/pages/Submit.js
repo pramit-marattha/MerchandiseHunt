@@ -87,7 +87,7 @@ const Submit = ({ history }) => {
           name: user.displayName,
         },
         thumbnail: productThumbnails[0] || null,
-        photos: productPhotos[0] || null,
+        photos: productPhotos,
         voteCount: 1,
         comments: [],
         votes: [
@@ -111,7 +111,7 @@ const Submit = ({ history }) => {
   return (
     <>
       <IonPage>
-        <SmallHeader title="Submit" />
+        <SmallHeader title="Submit Your Product" />
         <IonContent fullscreen>
           <LargeHeader title="Submit" />
           <IonItem lines="full">

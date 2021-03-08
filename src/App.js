@@ -27,6 +27,7 @@ import Login from "./pages/Login";
 import Forgot from "./pages/Forgot";
 import useAuth from "./Hooks/useAuth";
 import UserContexts from "./contexts/UserContexts";
+import Product from "./pages/Product";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -73,28 +74,29 @@ const App = () => {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot" component={Forgot} />
+              <Route path="/product/:productId" component={Product} />
               <Route component={() => <Redirect to="/home" />} />
             </IonRouterOutlet>
             <IonTabBar slot="bottom">
               <IonTabButton tab="home" href="/home">
                 <IonIcon icon={listCircleOutline} />
-                <IonLabel> Merchandise Hunt</IonLabel>
+                <IonLabel>🏬 MerchHunt</IonLabel>
               </IonTabButton>
               <IonTabButton tab="trending" href="/trending">
                 <IonIcon icon={trendingUpOutline} />
-                <IonLabel>Trending</IonLabel>
+                <IonLabel>📈 Trending</IonLabel>
               </IonTabButton>
               <IonTabButton tab="submit" href="/submit">
                 <IonIcon icon={createOutline} />
-                <IonLabel>Submit</IonLabel>
+                <IonLabel>✔️Submit</IonLabel>
               </IonTabButton>
               <IonTabButton tab="search" href="/search">
                 <IonIcon icon={searchOutline} />
-                <IonLabel>Search</IonLabel>
+                <IonLabel>🔍Search</IonLabel>
               </IonTabButton>
               <IonTabButton tab="profile" href="/profile">
                 <IonIcon icon={personCircleOutline} />
-                <IonLabel>Profile</IonLabel>
+                <IonLabel>🐻Profile</IonLabel>
               </IonTabButton>
             </IonTabBar>
           </IonTabs>

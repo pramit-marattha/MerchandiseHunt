@@ -1,5 +1,7 @@
 # Merchandise Hunt
 
-# current progress
+---
 
-![image](https://user-images.githubusercontent.com/37651620/110286162-8f798200-800c-11eb-8ff7-d9cb4229edca.png)
+### current progress
+
+![image](https://user-images.githubusercontent.com/37651620/110312233-ebec9980-802c-11eb-9f92-9d56ffeffbb5.png)

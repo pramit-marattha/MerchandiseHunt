@@ -21,10 +21,9 @@ const ProductItem = ({ product, url, browser }) => {
             </IonThumbnail>
             <IonLabel>
               <div className="ion-text-wrap">
-                <strong style={{ fontSize: "1rem" }}>{product.title}</strong>
+                <strong style={{ fontSize: "1.5rem" }}>{product.title}</strong>
               </div>
-
-              <div className="ion-text-wrap" style={{ fontSize: "0.8rem" }}>
+              <div className="ion-text-wrap" style={{ fontSize: "1rem" }}>
                 {product.description}
               </div>
             </IonLabel>
