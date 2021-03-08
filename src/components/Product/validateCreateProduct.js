@@ -9,7 +9,7 @@ export default function validateCreateProduct(values) {
 
   if (!values.description) {
     errors.description = "Your description is required.";
-  } else if (values.description.length < 10) {
+  } else if (values.description.length < 5) {
     errors.description = "The description must be atleast 10 character long";
   }
 
