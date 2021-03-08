@@ -63,7 +63,6 @@ const ProductList = (props) => {
           </IonLabel>
         </IonItem>
       );
-
       prevDate = currentDate;
     }
 
