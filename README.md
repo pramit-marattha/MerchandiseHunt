@@ -2,6 +2,10 @@
 
 ![MerchanDiseHunt](https://user-images.githubusercontent.com/37651620/110583265-8a940a00-8195-11eb-8086-63a220ee42d1.png)
 
+<h2 align="center">
+<a href="https://merchandisehunt.pages.dev/">merchandisehunt.pages.dev</a>
+</h2>
+
 ## Product Home page
 
 ![product_home](https://user-images.githubusercontent.com/37651620/110586569-87e7e380-819a-11eb-8a46-efa6c014cd3a.gif)
