@@ -64,7 +64,7 @@ const Profile = (props) => {
                 <IonButton
                   expand="block"
                   routerLink={`/editprofile`}
-                  color="primary"
+                  color="success"
                   fill="outline"
                 >
                   Edit profile
@@ -75,7 +75,7 @@ const Profile = (props) => {
               <IonCol>
                 <IonButton
                   expand="block"
-                  color="primary"
+                  color="danger"
                   fill="outline"
                   onClick={logoutUser}
                 >
@@ -87,11 +87,11 @@ const Profile = (props) => {
         ) : (
           <IonGrid>
             <IonRow>
-              <IonCol>
+              <IonCol style={{ textAlign: "center" }}>
                 <IonButton
-                  expand="block"
+                  size="large"
+                  color="secondary"
                   routerLink={`/signup`}
-                  color="primary"
                 >
                   Register
                 </IonButton>
@@ -99,8 +99,8 @@ const Profile = (props) => {
             </IonRow>
 
             <IonRow>
-              <IonCol>
-                <IonButton expand="block" routerLink={`/login`} color="primary">
+              <IonCol style={{ textAlign: "center" }}>
+                <IonButton size="large" routerLink={`/login`} color="tertiary">
                   Login
                 </IonButton>
               </IonCol>
