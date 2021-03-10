@@ -15,6 +15,8 @@ import UserContext from "../contexts/UserContexts";
 import NavHeader from "../components/Header/NavHeader";
 import ProductItem from "../components/Product/ProductItem";
 import ProductPhotos from "../components/Product/ProductPhotos";
+import ProductComment from "../components/Product/ProductComment";
+import CommentModal from "../components/Product/CommentModal";
 
 import productService from "../services/product";
 
@@ -23,6 +25,7 @@ const { Browser } = Plugins;
 const Product = (props) => {
   const { user } = useContext(UserContext);
   const [product, setProduct] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const productId = props.match.params.productId;
   const productRef = firebase.db.collection("products").doc(productId);
 
@@ -35,6 +38,42 @@ const Product = (props) => {
     productRef.get().then((doc) => {
       setProduct({ ...doc.data(), id: doc.id });
     });
+  }
+
+  function handleOpenModal() {
+    if (!user) {
+      props.history.push("/login");
+    } else {
+      setShowModal(true);
+    }
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
+  }
+
+  function handleAddingComment(commentText) {
+    if (!user) {
+      props.history.push("/login");
+    } else {
+      productRef.get().then((doc) => {
+        if (doc.exists) {
+          const previousComments = doc.data().comments;
+          const newComment = {
+            postedBy: { id: user.uid, name: user.displayName },
+            created: Date.now(),
+            text: commentText,
+          };
+          const updatedComments = [...previousComments, newComment];
+          productRef.update({ comments: updatedComments });
+          setProduct((prevState) => ({
+            ...prevState,
+            comments: updatedComments,
+          }));
+        }
+      });
+      setShowModal(false);
+    }
   }
 
   function handleAddVote() {
@@ -79,6 +118,12 @@ const Product = (props) => {
         action={handleDeleteProduct}
       />
       <IonContent>
+        <CommentModal
+          isOpen={showModal}
+          title="New Comment"
+          sendAction={handleAddingComment}
+          closeAction={handleCloseModal}
+        />
         {product && (
           <>
             <IonGrid>
@@ -87,11 +132,22 @@ const Product = (props) => {
                   <ProductItem product={product} browser={openBrowser} />
                   <ProductPhotos photos={product.photos} />
                   <IonButton onClick={() => handleAddVote()} size="medium">
-                    Upvote
+                    🗳️ Give an Upvote
+                  </IonButton>
+                  <IonButton onClick={() => handleOpenModal()} size="medium">
+                    📜 Post a comment
                   </IonButton>
                 </IonCol>
               </IonRow>
             </IonGrid>
+            {product.comments.map((comment, index) => (
+              <ProductComment
+                key={index}
+                comment={comment}
+                product={product}
+                setProduct={setProduct}
+              />
+            ))}
           </>
         )}
       </IonContent>
