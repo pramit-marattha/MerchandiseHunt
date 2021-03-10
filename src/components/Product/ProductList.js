@@ -57,7 +57,16 @@ const ProductList = (props) => {
 
     if (currentDate !== prevDate && !isTrending) {
       result.unshift(
-        <IonItem color="medium" lines="none" key={currentDate}>
+        <IonItem
+          color="teal"
+          style={{
+            color: "#2196f3",
+            fontSize: "1.3rem",
+            fontStyle: "italic",
+          }}
+          lines="none"
+          key={currentDate}
+        >
           <IonLabel>
             <strong>{currentDate}</strong>
           </IonLabel>

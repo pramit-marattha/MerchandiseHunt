@@ -7,9 +7,9 @@ import { personCircleOutline, mailOutline } from "ionicons/icons";
 
 const Home = (props) => {
   return (
-    <IonPage>
+    <IonPage style={{ backgroundColor: "#92949c" }}>
       <SmallHeader title="🛍️ Merchandise Hunt" />
-      <IonContent color="medium" fullscreen>
+      <IonContent fullscreen>
         <LargeHeader title="ProductHunt" />
         <br></br>
         <ProductList location={props.location}></ProductList>

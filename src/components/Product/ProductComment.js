@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import {
   IonCard,
   IonCardContent,
@@ -13,8 +13,8 @@ import CommentModal from "./CommentModal";
 import firebase from "../../firebase";
 
 const ProductComment = ({ comment, product, setProduct }) => {
-  const { user } = React.useContext(UserContext);
-  const [showModal, setShowModal] = React.useState(false);
+  const { user } = useContext(UserContext);
+  const [showModal, setShowModal] = useState(false);
 
   const postedByAuthUser = user && user.uid === comment.postedBy.id;
 
@@ -83,13 +83,13 @@ const ProductComment = ({ comment, product, setProduct }) => {
                     fontWeight: "normal",
                   }}
                 >
-                  {comment.postedBy.name} {" | "}
+                  {comment.postedBy.name} {" 🕑 "}
                   {formatDistanceToNow(comment.created)}
                 </p>
                 <div className="ion-padding-vertical">{comment.text}</div>
                 {postedByAuthUser && (
                   <IonButton size="small" onClick={() => setShowModal(true)}>
-                    Edit
+                    🖊️ Edit
                   </IonButton>
                 )}
                 {postedByAuthUser && (
@@ -97,7 +97,7 @@ const ProductComment = ({ comment, product, setProduct }) => {
                     size="small"
                     onClick={() => handleDeleteComment(comment)}
                   >
-                    Delete
+                    🗑️ Delete
                   </IonButton>
                 )}
               </IonLabel>
