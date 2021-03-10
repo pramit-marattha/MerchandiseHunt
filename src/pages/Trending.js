@@ -7,9 +7,9 @@ import ProductList from "../components/Product/ProductList";
 const Trending = (props) => {
   return (
     <IonPage>
-      <SmallHeader title="Trending" />
+      <SmallHeader title="📈 Trending Products" />
       <IonContent fullscreen>
-        <LargeHeader title="Trending" />
+        <LargeHeader title="📈 Trending Products" />
         <br></br>
         <ProductList location={props.location}></ProductList>
       </IonContent>
