@@ -12,6 +12,7 @@ const Trending = (props) => {
         <LargeHeader title="📈 Trending Products" />
         <br></br>
         <ProductList location={props.location}></ProductList>
+        {console.log("What the fuzzzz", props.location)}
       </IonContent>
     </IonPage>
   );

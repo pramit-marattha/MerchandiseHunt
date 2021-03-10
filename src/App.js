@@ -80,23 +80,48 @@ const App = () => {
             <IonTabBar slot="bottom">
               <IonTabButton tab="home" href="/home">
                 <IonIcon icon={listCircleOutline} />
-                <IonLabel>🏬 MerchHunt</IonLabel>
+                <IonLabel>
+                  <span role="img" aria-label="store">
+                    🏬
+                  </span>{" "}
+                  MerchHunt
+                </IonLabel>
               </IonTabButton>
               <IonTabButton tab="trending" href="/trending">
                 <IonIcon icon={trendingUpOutline} />
-                <IonLabel>📈 Trending</IonLabel>
+                <IonLabel>
+                  <span role="img" aria-label="stonk">
+                    📈
+                  </span>{" "}
+                  Trending
+                </IonLabel>
               </IonTabButton>
               <IonTabButton tab="submit" href="/submit">
                 <IonIcon icon={createOutline} />
-                <IonLabel>✔️Submit</IonLabel>
+                <IonLabel>
+                  <span role="img" aria-label="checkmark">
+                    ✔️
+                  </span>{" "}
+                  Submit
+                </IonLabel>
               </IonTabButton>
               <IonTabButton tab="search" href="/search">
                 <IonIcon icon={searchOutline} />
-                <IonLabel>🔍Search</IonLabel>
+                <IonLabel>
+                  <span role="img" aria-label="search">
+                    🔍
+                  </span>{" "}
+                  Search
+                </IonLabel>
               </IonTabButton>
               <IonTabButton tab="profile" href="/profile">
                 <IonIcon icon={personCircleOutline} />
-                <IonLabel>🐻Profile</IonLabel>
+                <IonLabel>
+                  <span role="img" aria-label="bear">
+                    🐻
+                  </span>
+                  Profile
+                </IonLabel>
               </IonTabButton>
             </IonTabBar>
           </IonTabs>

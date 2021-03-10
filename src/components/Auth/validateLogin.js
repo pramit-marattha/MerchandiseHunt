@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function validateLogin(values) {
   let errors = {};
 

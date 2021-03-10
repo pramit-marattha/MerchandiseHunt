@@ -19,8 +19,6 @@ function ProductPhotos({ photos }) {
               onClick={() => setIndex(i)}
               slot="start"
             >
-              {console.log("hheehehehe", photos)}
-
               <IonImg src={p} />
             </IonThumbnail>
           ))}

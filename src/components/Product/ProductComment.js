@@ -89,7 +89,10 @@ const ProductComment = ({ comment, product, setProduct }) => {
                 <div className="ion-padding-vertical">{comment.text}</div>
                 {postedByAuthUser && (
                   <IonButton size="small" onClick={() => setShowModal(true)}>
-                    🖊️ Edit
+                    <span role="img" aria-label="pen">
+                      🖊️
+                    </span>{" "}
+                    Edit
                   </IonButton>
                 )}
                 {postedByAuthUser && (
@@ -97,7 +100,10 @@ const ProductComment = ({ comment, product, setProduct }) => {
                     size="small"
                     onClick={() => handleDeleteComment(comment)}
                   >
-                    🗑️ Delete
+                    <span role="img" aria-label="bin">
+                      🗑️
+                    </span>{" "}
+                    Delete
                   </IonButton>
                 )}
               </IonLabel>

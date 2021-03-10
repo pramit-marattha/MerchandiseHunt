@@ -31,7 +31,6 @@ const Product = (props) => {
 
   useEffect(() => {
     getProduct();
-    // eslint-disable-next-line
   }, [productId]);
 
   function getProduct() {
@@ -132,10 +131,16 @@ const Product = (props) => {
                   <ProductItem product={product} browser={openBrowser} />
                   <ProductPhotos photos={product.photos} />
                   <IonButton onClick={() => handleAddVote()} size="medium">
-                    🗳️ Give an Upvote
+                    <span role="img" aria-label="ballotbox">
+                      🗳️
+                    </span>{" "}
+                    Give an Upvote
                   </IonButton>
                   <IonButton onClick={() => handleOpenModal()} size="medium">
-                    📜 Post a comment
+                    <span role="img" aria-label="scroll">
+                      📜
+                    </span>{" "}
+                    Post a comment
                   </IonButton>
                 </IonCol>
               </IonRow>

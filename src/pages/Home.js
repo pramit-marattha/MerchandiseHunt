@@ -1,9 +1,8 @@
 import React from "react";
-import { IonPage, IonContent, IonIcon } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
 import SmallHeader from "../components/Header/SmallHeader";
 import LargeHeader from "../components/Header/LargeHeader";
 import ProductList from "../components/Product/ProductList";
-import { personCircleOutline, mailOutline } from "ionicons/icons";
 
 const Home = (props) => {
   return (
@@ -13,6 +12,7 @@ const Home = (props) => {
         <IonContent fullscreen>
           <img
             src="assets/MerchanDiseHunt.png"
+            alt="MerchantdiseHunt"
             style={{
               width: "15%",
               display: "block",

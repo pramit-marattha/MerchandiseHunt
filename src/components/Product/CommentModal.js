@@ -24,11 +24,19 @@ const CommentModal = ({ isOpen, title, sendAction, closeAction, comment }) => {
         <IonToolbar color="primary">
           <IonTitle>{title}</IonTitle>
           <IonButtons slot="start">
-            <IonButton onClick={closeAction}>❌ Close</IonButton>
+            <IonButton onClick={closeAction}>
+              <span role="img" aria-label="cross">
+                ❌
+              </span>{" "}
+              Close
+            </IonButton>
           </IonButtons>
           <IonButtons slot="end">
             <IonButton onClick={() => handleSendAction(commentText)}>
-              Post 📮
+              Post{" "}
+              <span role="img" aria-label="postbox">
+                📮
+              </span>
             </IonButton>
           </IonButtons>
         </IonToolbar>
