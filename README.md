@@ -32,8 +32,6 @@
 <img src="https://user-images.githubusercontent.com/37651620/110631884-1c6c3900-81cf-11eb-9729-5b14fe19ad38.gif" width="50%"/>
 </p>
 
-<!-- [![APK](https://user-images.githubusercontent.com/37651620/110664135-42a1d100-81ef-11eb-90f2-7bc76a40e161.png)](https://github.com/pramit-marattha/MerchandiseHunt/releases/download/merch-hunt/app-release.apk) -->
-
 <p align="center">
 <a href="https://github.com/pramit-marattha/MerchandiseHunt/releases/download/merch-hunt/app-release.apk"><img src="https://user-images.githubusercontent.com/37651620/110664135-42a1d100-81ef-11eb-90f2-7bc76a40e161.png" width="50%"/></a>
 </p>
