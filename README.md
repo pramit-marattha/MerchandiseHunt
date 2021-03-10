@@ -21,3 +21,9 @@
 ## User profile / sign-UP/ Sign-IN page
 
 ![image](https://user-images.githubusercontent.com/37651620/110587427-c92cc300-819b-11eb-8736-cbdbcadc33ae.png)
+
+## Android Deployment
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/37651620/110631884-1c6c3900-81cf-11eb-9729-5b14fe19ad38.gif" width="50%"/>
+</p>
