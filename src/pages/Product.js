@@ -7,7 +7,7 @@ import {
   IonRow,
   IonCol,
 } from "@ionic/react";
-import { closeCircleOutline } from "ionicons/icons";
+import { closeCircleOutline, trash } from "ionicons/icons";
 
 import firebase from "../firebase";
 import { Plugins } from "@capacitor/core";
@@ -113,7 +113,7 @@ const Product = (props) => {
       <NavHeader
         title={product && product.description}
         option={product && postedByAuthUser(product)}
-        icon={closeCircleOutline}
+        icon={trash}
         action={handleDeleteProduct}
       />
       <IonContent>

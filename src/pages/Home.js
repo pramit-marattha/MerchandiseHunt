@@ -13,11 +13,13 @@ const Home = (props) => {
           <img
             src="assets/MerchanDiseHunt.png"
             alt="MerchantdiseHunt"
+            href="#"
             style={{
               width: "15%",
               display: "block",
               marginRight: "auto",
               marginLeft: "auto",
+              cursor: "pointer",
             }}
           />
 
